@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-surface: #fbf9f5;
+    --color-surface-dim: #dbdad6;
+    --color-surface-lowest: #ffffff;
+    --color-surface-low: #f5f3ef;
+    --color-surface-container: #f0eeea;
+    --color-primary: #1c1917;
+    --color-secondary: #c5a059;
+    --color-tertiary: #e5c378;
+    --color-bronze: #997a2e;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    background-color: #fbf9f5;
+    color: #1b1c1a;
+  }
+
+  ::selection {
+    background-color: #f0e6d2;
+    color: #1c1917;
+  }
+}
+
+@layer utilities {
+  /* Hairline luxury metallic borders */
+  .border-champagne {
+    border: 1px solid rgba(197, 160, 89, 0.28);
+  }
+
+  .border-champagne-light {
+    border: 1px solid rgba(197, 160, 89, 0.16);
+  }
+
+  .border-champagne-strong {
+    border: 1px solid rgba(197, 160, 89, 0.55);
+  }
+
+  /* Frosted Glassmorphism for High-Society look */
+  .glass-card {
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(197, 160, 89, 0.25);
+  }
+
+  .glass-dark {
+    background: rgba(28, 25, 23, 0.75);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(197, 160, 89, 0.35);
+  }
+
+  .glass-badge {
+    background: rgba(255, 255, 255, 0.82);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(197, 160, 89, 0.35);
+  }
+
+  /* Ambient Gold Glow & Radiance */
+  .gold-glow {
+    box-shadow: 0 12px 32px -8px rgba(197, 160, 89, 0.14), 0 4px 12px -2px rgba(28, 25, 23, 0.04);
+  }
+
+  .gold-glow-hover {
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .gold-glow-hover:hover {
+    box-shadow: 0 18px 40px -10px rgba(197, 160, 89, 0.22), 0 0 0 1px rgba(197, 160, 89, 0.45);
+    transform: translateY(-2px);
+  }
+
+  /* Metallic Text Gradient */
+  .text-metallic-gold {
+    background: linear-gradient(135deg, #dfc085 0%, #c5a059 50%, #997a2e 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Accessible Focus Ring */
+  .focus-ring {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-champagne-500 focus-visible:ring-offset-2 focus-visible:ring-offset-surface;
+  }
+
+  /* Custom subtle scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #f5f3ef;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #d7ba7c;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #c5a059;
+  }
+}
