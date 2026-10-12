@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "share": "npx cloudflared tunnel --url http://localhost:5173",
+    "share": "node scripts/share.js",
     "build": "vite build",
     "lint": "oxlint",
     "preview": "vite preview"
